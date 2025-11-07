@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="24128" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="24128"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -34,7 +34,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="AmB-Y6-frK"/>
-                            <menuItem title="Quit LuLu" keyEquivalent="q" id="DEa-wY-se7">
+                            <menuItem title="Quit LuLu" hidden="YES" enabled="NO" keyEquivalent="q" id="DEa-wY-se7">
                                 <connections>
                                     <action selector="quit:" target="Voe-Tx-rLC" id="dd7-Bg-qcz"/>
                                 </connections>
@@ -104,18 +104,18 @@
                     </menu>
                 </menuItem>
                 <menuItem title="Settings..." tag="109" keyEquivalent="," id="4Uv-rm-VzQ"/>
-                <menuItem title="Network Monitor..." tag="110" id="VuY-Sy-392" userLabel="Network Monitor...">
+                <menuItem title="Network Monitor..." tag="110" hidden="YES" enabled="NO" id="VuY-Sy-392" userLabel="Network Monitor...">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="i6W-GD-eRH"/>
-                <menuItem title="Quit LuLu" tag="111" id="QrZ-U2-1Ib">
+                <menuItem title="Quit LuLu" tag="111" hidden="YES" enabled="NO" id="QrZ-U2-1Ib">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
-                <menuItem title="Uninstall LuLu" tag="112" id="lns-C6-Aa5">
+                <menuItem title="Uninstall LuLu" tag="112" hidden="YES" enabled="NO" id="lns-C6-Aa5">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="4wj-Sr-XSL"/>
-                <menuItem title="Support LuLu 💕" tag="113" id="K0B-xd-gGB">
+                <menuItem title="Support LuLu 💕" tag="113" hidden="YES" enabled="NO" id="K0B-xd-gGB">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
             </items>

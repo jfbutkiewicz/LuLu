@@ -9,8 +9,6 @@
 	<key>com.apple.developer.system-extension.install</key>
 	<true/>
 	<key>com.apple.security.application-groups</key>
-	<array>
-		<string>$(TeamIdentifierPrefix)com.objective-see.lulu</string>
-	</array>
+	<array/>
 </dict>
 </plist>
