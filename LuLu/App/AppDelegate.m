@@ -78,7 +78,8 @@ XPCDaemonClient* xpcDaemonClient = nil;
     }
     
     //Apple: item's w/ System Extensions must be run from /Applications 🤷🏻‍♂️
-    if(![NSBundle.mainBundle.bundlePath hasPrefix:@"/Applications/"])
+    // SG test
+    /*if(![NSBundle.mainBundle.bundlePath hasPrefix:@"/Applications/"])
     {
         //dbg msg
         os_log_debug(logHandle, "LuLu running from %{public}@, not from within /Applications", NSBundle.mainBundle.bundlePath);
@@ -88,7 +89,7 @@ XPCDaemonClient* xpcDaemonClient = nil;
         
         //exit
         [NSApplication.sharedApplication terminate:self];
-    }
+    }*/
     
     //first time?
     // show/walk thru welcome screen(s)
@@ -136,7 +137,8 @@ XPCDaemonClient* xpcDaemonClient = nil;
         
         //started by user?
         // show startup msg....
-        if(YES == launchedByUser())
+        // Modified to avaoid any startup windows even if it is a user launch
+        /*if(YES == launchedByUser())
         {
             //dbg msg
             os_log_debug(logHandle, "showing startup window...");
@@ -161,7 +163,7 @@ XPCDaemonClient* xpcDaemonClient = nil;
             
             //show window
             [self.startupWindowController showWindow:nil];
-        }
+        }*/
         
         //grab OS version
         version = NSProcessInfo.processInfo.operatingSystemVersion;
@@ -177,8 +179,8 @@ XPCDaemonClient* xpcDaemonClient = nil;
         //wait a few seconds, so that startup window can show... then fade out
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delay * NSEC_PER_SEC), dispatch_get_main_queue(),
         ^{
-            //fade out
-            fadeOut(self.startupWindowController.window, 1.0f);
+            //fade out - removed for SG as no userlaunch tested
+            //fadeOut(self.startupWindowController.window, 1.0f);
             
             //(re)activate extension
             // this will call back to complete inits when done
